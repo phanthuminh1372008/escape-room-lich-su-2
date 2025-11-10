@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Room — Mật Thất Lịch Sử</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Escape Room — Mật Thất Lịch Sử</h1>
+    <p class="lead">Hãy kiểm chứng thông tin trong video và poster lịch sử để mở cửa thoát!</p>
+
+    <!-- Puzzle 1: Video Shorts -->
+    <div class="puzzle" id="puzzle1">
+      <h2>Câu 1 — Video ngắn</h2>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/ATWuXsE9S7E"
+          title="Video lịch sử ngắn"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="hint">Video nói: "Nguyễn Huệ và Quang Trung là hai người khác nhau"</p>
+      <div class="choices">
+        <button onclick="checkAnswer(1,true)">Đúng</button>
+        <button onclick="checkAnswer(1,false)">Sai</button>
+      </div>
+      <p id="feedback1" class="feedback"></p>
+    </div>
+
+    <!-- Puzzle 2: Poster -->
+    <div class="puzzle" id="puzzle2">
+      <h2>Câu 2 — Poster</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Nguyen_Hue_Emperor.jpg"
+           alt="Quang Trung"
+           class="poster">
+      <p class="hint">Poster ghi: "Nguyễn Huệ và Quang Trung là một người"</p>
+      <div class="choices">
+        <button onclick="checkAnswer(2,true)">Đúng</button>
+        <button onclick="checkAnswer(2,false)">Sai</button>
+      </div>
+      <p id="feedback2" class="feedback"></p>
+    </div>
+
+    <!-- Door -->
+    <div class="door">
+      <h2>Cửa thoát</h2>
+      <button onclick="tryDoor()">Mở cửa</button>
+      <p id="doorFeedback" class="feedback"></p>
+    </div>
+
+    <!-- Status -->
+    <div class="status">
+      <p id="scoreDisplay">Điểm: 0</p>
+      <p id="progressDisplay">Tiến độ: 0 / 2</p>
+    </div>
+
+    <footer class="foot">
+      <small>Đề tài: Khảo sát ảnh hưởng của video ngắn về lịch sử đến nhận thức và kỹ năng phản biện của học sinh THPT.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
